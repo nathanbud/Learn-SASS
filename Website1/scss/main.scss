@@ -103,6 +103,7 @@ article.card{
     margin: 5em auto 1em;
     border-radius: $border-radius;
     box-shadow: 0 10px 30px rgba(0,0,0, .2) ;
+    width:100%;
 
     @include desktop{
         grid-area: card;
