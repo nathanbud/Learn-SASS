@@ -81,6 +81,9 @@ header a {
   text-align: center;
   padding: 15px 25px;
   display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 article.card {
@@ -91,6 +94,7 @@ article.card {
   border-radius: 20px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -123,12 +127,14 @@ article.landing-text h1 {
 }
 
 #portfolio {
+  width: 90%;
+  margin: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50px 100px 200px;
-      grid-template-columns: 50px 100px 200px;
-  -ms-grid-rows: 50px 100px;
-      grid-template-rows: 50px 100px;
+  grid-gap: 50px;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 350px;
 }
 
 #portfolio article {
